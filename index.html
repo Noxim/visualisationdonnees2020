@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!--<script src="dummy.json"></script>-->
+    <script src="jsoninput.js"></script>
+
     <title>My Project!</title>
 </head>
-<body>
-    Hello World!
+<body style="background-color:rgb(115, 133, 133)">
+
+    <div id="intro_container" style="background-color: slategrey;">
+        <h1>Hello and welcome to this small applet</h1>
+        <p>You may search for any movie you like and get informations about it, but viualized!</p>
+        <p>Alternatively, you may click one of the button to obtain an overview of a sample of 100 movies</p>
+    </div>
+
+    <div id=results_container>
+        <p id="Title" name="Inner"></p>
+        <p id="Director" name="Inner"></p>
+        <p id="Year" name="Inner"></p>
+        <p id="Plot" name="Inner"></p>
+        <p id="Actors" name="Inner"></p>
+        <img src="" alt="" id="Poster">
+    </div>
+    <div id="svg_container"></div>
+    <input type="text" placeholder="Any Movie" id="user_search"> <input type="button" value="Submit" onclick="movieBySearch()">
+    <input type="button" value="By Genres" onclick="moviesByGenres()">
+    <input type="button" value="By Year of Release" onclick="moviesByYears()">
+
 </body>
+<script src="script.js"></script>
 </html>
