@@ -22,3 +22,7 @@
 <h6>OPTIONEL</h6>
 <p>Si l'on veut utiliser des données customisées (choix les films comparés), il est necessaire d'utiliser python 3.6+ et de lancer le script python. Auquel cas, il faut modifier la ligne 7 du script et modifier la liste de films à cet endroit.</p>
 <p>Cette opération retourne un fichier dummy.json qui doit être chargé dans l'application par jsoninput.js</p>
+
+<h5>Auteur</h5>
+<p> Ce projet à été réalisé par Robin Pitteloud, dans le cadre du cours de Visualisation de Données donné par Mr. Loïc Cattani, assisté par Mr. Loris Rimaz.</p>
+Université de Lausanne, Juin 2020.

@@ -7,13 +7,12 @@
     <!--<script src="dummy.json"></script>-->
     <script src="jsoninput.js"></script>
 
-    <title>My Project!</title>
+    <title>A visualisation of OMDB data</title>
 </head>
 <body style="background-color:rgb(115, 133, 133)">
 
     <div id="intro_container" style="background-color: slategrey;">
         <h1>Hello and welcome to this small applet</h1>
-        <p>Please note the year is optional for the search</p>
     </div>
 
     <div id=results_container>
@@ -25,10 +24,11 @@
         <img src="" alt="" id="Poster">
     </div>
     <div id="svg_container"></div>
-    <input type="text" placeholder="Any Movie" id="user_search"> <input type="text" placeholder="YYYY" id="user_year" style="width:50px"> <input type="button" value="Submit" onclick="movieBySearch()"><br/>
+    <p id="legend"></p>
+    <p><input type="text" placeholder="Any Movie" id="user_search"> <input type="text" placeholder="YYYY" id="user_year" style="width:50px"> <input type="button" value="Submit" onclick="movieBySearch()"> Please note the year is optional for the search.</p><br/>
     <input type="button" value="By Genres" onclick="moviesByGenres()">
     <input type="button" value="By Year of Release" onclick="moviesByYears()">
-
+    
 </body>
 <script src="script.js"></script>
 </html>

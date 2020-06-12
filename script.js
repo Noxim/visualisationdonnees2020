@@ -184,6 +184,7 @@ async function movieBySearch(){
     document.getElementById("Plot").innerHTML="Plot summary: "+data.Plot
     document.getElementById("Actors").innerHTML="Main cast: "+data.Actors
     document.getElementById("Poster").src=data.Poster
+    document.getElementById("legend").innerHTML="The inner number is the score of the movie given by the site."
 
     let imdbva, rottenva, metava;
     for(var j = 0; j < data.Ratings.length; j++){
@@ -265,7 +266,7 @@ function moviesByYears(){
     document.getElementById("Plot").innerHTML=""
     document.getElementById("Actors").innerHTML=""
     document.getElementById("Poster").src = ""
-
+    document.getElementById("legend").innerHTML="The rightmost number is the agregated score for this category. The inner number is the number of entries for that category."
 
     const genres = [
     { name: "1940-1969", count: nrMovies("",year=[1940,1969]), color: "rgb(125,125,125)", ratings: averageScoreByYearOfRelease(year=[1940,1969]) },
@@ -357,6 +358,8 @@ function moviesByGenres(){
     document.getElementById("Plot").innerHTML=""
     document.getElementById("Actors").innerHTML=""
     document.getElementById("Poster").src = ""
+    document.getElementById("legend").innerHTML="The rightmost number is the agregated score for this category. The inner number is the number of entries for that category."
+
     const genres = [
     { name: "Sci-Fi", count: nrMovies("Sci-Fi"), color: "orange", ratings: averageScoreByGenre("Sci-Fi") },
     { name: "Fantasy", count: nrMovies("Fantasy"), color: "purple", ratings: averageScoreByGenre("Fantasy") },
