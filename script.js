@@ -171,6 +171,10 @@ async function movieBySearch(){
     d3.select("svg").remove()
     let base_url = 'http://www.omdbapi.com/?apikey=9af3c311&t=';
     let movie = document.getElementById("user_search").value.replace(" ", "+");
+    if(document.getElementById("user_year").value != ""){
+        let yearstring = "&y="+document.getElementById("user_year").value
+        movie+=yearstring
+    }
     const url = base_url + movie;
     let data = await getData(url)
 
@@ -196,7 +200,7 @@ async function movieBySearch(){
     const ratings = [
         { name: "IMDB", value: imdbva, color: "rgb(150,150,25)" },
         { name: "R. Tomatoes", value: rottenva, color: "rgb(230,40,40)" },
-        { name: "Metacritic", value: metava, color: "grey" }
+        { name: "Metacritic", value: metava, color: "yellow" }
     ]
 
     const svg= d3.select("#svg_container")
